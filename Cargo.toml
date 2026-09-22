@@ -1,0 +1,16 @@
+[package]
+name = "native-trust-verify"
+version = "0.1.0"
+edition = "2021"
+description = "Verify Ed25519 and P-256 ECDSA signatures from JWK trust bundles — for desktop apps that need to verify cloud-issued receipts"
+license = "MIT"
+repository = "https://github.com/lightss19863-arch/native-trust-verify"
+keywords = ["ed25519", "p256", "jwk", "signature", "verification"]
+categories = ["cryptography", "authentication"]
+
+[dependencies]
+base64 = "0.22"
+ed25519-dalek = "2"
+p256 = { version = "0.13", features = ["ecdsa"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
